@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:whitesmoke;
+            color: black;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .calculator {
+            width: 250px;
+            background: #16213e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #0f3460;
+            border-radius: 5px;
+            background: #0f3460;
+            color: white;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.operator {
+            background:#7e7676;
+            color: white;
+        }
+
+        button.equal {
+            background: #2ecc71;
+            color: white;
+        }
+
+        button.clear {
+            background: #e74c3c;
+            color: white;
+        }
+
+        button.number {
+            background: #a4a4a4;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>Calculator</p><br>
+    <div class="calculator">
+        <input type="text" id="display" disabled><br><br>
+        <div class="buttons">
+            <button onclick="clearDisplay()" class="clear">C</button>
+            <button onclick="valueIn('7')" class="number">7</button>
+            <button onclick="valueIn('8')" class="number">8</button>
+            <button onclick="valueIn('9')" class="number">9</button>
+            <button onclick="valueIn('+')" class="operator">+</button>
+
+            <button onclick="valueIn('4')" class="number">4</button>
+            <button onclick="valueIn('5')" class="number">5</button>
+            <button onclick="valueIn('6')" class="number">6</button>
+            <button onclick="valueIn('-')" class="operator">-</button>
+
+            <button onclick="valueIn('1')" class="number">1</button>
+            <button onclick="valueIn('2')" class="number">2</button>
+            <button onclick="valueIn('3')" class="number">3</button>
+            <button onclick="valueIn('*')" class="operator">*</button>
+
+            <button onclick="valueIn('/')" class="operator">/</button>
+            <button onclick="valueIn('.')" class="operator">.</button>
+            <button onclick="valueIn('0')" class="number">0</button>
+            <button onclick="valueIn('%')" class="operator">%</button>
+
+            <button onclick="valueIn('(')" class="operator">(</button>
+            <button onclick="valueIn(')')" class="operator">)</button>
+            <button onclick="calculateresult()" class="equal">=</button>
+        </div>
+    </div>
+    <script>
+        let isResultDisplayed = false;
+
+        function valueIn(value) {
+            let display = document.getElementById("display");
+            if (isResultDisplayed) {
+                display.value = "";
+                isResultDisplayed = false;
+            }
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+            isResultDisplayed = false;
+        }
+
+        function calculateresult() {
+            try {
+                let display = document.getElementById("display");
+                display.value = eval(display.value);
+                isResultDisplayed = true;
+            } catch {
+                document.getElementById("display").value = "Error";
+                isResultDisplayed = true;
+            }
+        }
+    </script>
+</body>
+</html>
