@@ -1,0 +1,13 @@
+1. Technologies Used
+HTML → For structuring the calculator layout.
+CSS → For styling the calculator (button styling, responsive design).
+JavaScript → For handling calculations and user interactions.
+
+2. Software Requirements
+A Code Editor (e.g., VS Code, Notepad++)
+A Web Browser (e.g., Chrome, Firefox, Edge)
+
+3. Steps to Run the Calculator
+Open the project folder on your system.
+Run the HTML file by double-clicking or opening it in a web browser.
+Use the calculator to perform basic arithmetic operations.
