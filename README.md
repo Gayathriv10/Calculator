@@ -20,6 +20,10 @@ Install this project using this link
 ```bash
 git clone https://github.com/Gayathriv10/Calculator.git
 cd Calculator
+```
+Install the dependencies using this 
+```bash
 pip install -r requirements.txt
 ```
+
     
