@@ -18,7 +18,7 @@ https://calci-here.netlify.app/
 Install this project using this link 
 
 ```bash
-https://github.com/Gayathriv10/Calculator.git
+git clone https://github.com/Gayathriv10/Calculator.git
 cd Calculator
 pip install -r requirements.txt
 ```
