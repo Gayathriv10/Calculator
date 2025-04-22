@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:whitesmoke;
+    background:linear-gradient(135deg,rgb(219, 88, 234),rgb(61, 228, 200));
     color: black;
 }
 
@@ -23,7 +23,7 @@ h1 {
 
 .calculator {
     width: 250px;
-    background: #16213e;
+    background: #864ce9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -39,7 +39,7 @@ input {
     margin-bottom: 10px;
     border: 1px solid #0f3460;
     border-radius: 5px;
-    background: #0f3460;
+    background: #054491;
     color: white;
 }
 
